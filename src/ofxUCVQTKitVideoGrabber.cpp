@@ -1,11 +1,12 @@
 #include "ofxUCVQTKitVideoGrabber.h"
 ofxUCVQTKitVideoGrabber::ofxUCVQTKitVideoGrabber(){
-	controlHackWait = 1;
+	controlHackWait = -1;
 }
 void ofxUCVQTKitVideoGrabber::setupControls(int vendorId, int productId, int interfaceNum){
 	control.useCamera(vendorId, productId, interfaceNum);
 }
 void ofxUCVQTKitVideoGrabber::setupGui(string collectionName, string _filename, float x, float y){
+	controlHackWait = 1;
 	gui.setup(collectionName, _filename, x, y);
 	gui.loadFromFile(_filename);
 	
