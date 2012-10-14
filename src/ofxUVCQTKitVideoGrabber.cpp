@@ -32,7 +32,6 @@ void ofxUVCQTKitVideoGrabber::setupControls(int vendorId, int productId, int int
 void ofxUVCQTKitVideoGrabber::setupGui(string collectionName, string _filename, float x, float y){
 	controlHackWait = 1;
 	gui.setup(collectionName, _filename, x, y);
-	gui.loadFromFile(_filename);
 	
 	ofxToggle * autoExposure = new ofxToggle();
 	autoExposure->setup("Auto Exposure", false);
@@ -50,13 +49,13 @@ void ofxUVCQTKitVideoGrabber::setupGui(string collectionName, string _filename, 
 	gui.add(autoFocus);
 	
 	ofxFloatSlider * focus = new ofxFloatSlider();
-	focus->setup("Focus", 0.5, 0, 1);
 	focus->addListener(this, &ofxUVCQTKitVideoGrabber::onAbsoluteFocusChange);
+	focus->setup("Focus", 0.5, 0, 1);
+	
 	gui.add(focus);
 	
 	ofxToggle * autoWB = new ofxToggle();
 	autoWB->setup("Auto White Balance", false);
-	autoWB->addListener(this, &ofxUVCQTKitVideoGrabber::onAutoWhiteBalanceChange);
 	gui.add(autoWB);
 	
 	ofxFloatSlider * wb = new ofxFloatSlider();
@@ -86,9 +85,10 @@ void ofxUVCQTKitVideoGrabber::setupGui(string collectionName, string _filename, 
 	
 	ofxFloatSlider * sharpness = new ofxFloatSlider();
 	sharpness->setup("Sharpness", 0.2, 0, 1);
+	sharpness->addListener(this, &ofxUVCQTKitVideoGrabber::onSharpnessChange);
 	gui.add(sharpness);
 	
-	
+	gui.loadFromFile(_filename);
 }
 void ofxUVCQTKitVideoGrabber::update(){
 	ofxQTKitVideoGrabber::update();
@@ -125,38 +125,38 @@ ofxUVC& ofxUVCQTKitVideoGrabber::getControls(){
 }
 
 void ofxUVCQTKitVideoGrabber::onAutoExposureChange(bool & enable){
-	controls.setAutoExposure(enable);
+	if(controlHackWait == -1)controls.setAutoExposure(enable);
 }
 void ofxUVCQTKitVideoGrabber::onExposureChange(float & value){
-	controls.setExposure(1-value);
+	if(controlHackWait == -1)controls.setExposure(1-value);
 }
 
 void ofxUVCQTKitVideoGrabber::onAutoFocusChange(bool & enable){
-	controls.setAutoFocus(enable);
+	if(controlHackWait == -1)controls.setAutoFocus(enable);
 }
 void ofxUVCQTKitVideoGrabber::onAbsoluteFocusChange(float & value){
-	controls.setAbsoluteFocus(value);
+	if(controlHackWait == -1)controls.setAbsoluteFocus(value);
 }
 
 void ofxUVCQTKitVideoGrabber::onAutoWhiteBalanceChange(bool & enable){
-	controls.setAutoWhiteBalance(enable);
+	if(controlHackWait == -1)controls.setAutoWhiteBalance(enable);
 }
 void ofxUVCQTKitVideoGrabber::onWhiteBalanceChange(float & value){
-	controls.setWhiteBalance(value);
+	if(controlHackWait == -1)controls.setWhiteBalance(value);
 }
 
 void ofxUVCQTKitVideoGrabber::onGainChange(float & value){
-	controls.setGain(value);
+	if(controlHackWait == -1)controls.setGain(value);
 }
 void ofxUVCQTKitVideoGrabber::onBrightnessChange(float & value){
-	controls.setBrightness(value);
+	if(controlHackWait == -1)controls.setBrightness(value);
 }
 void ofxUVCQTKitVideoGrabber::onContrastChange(float & value){
-	controls.setContrast(value);
+	if(controlHackWait == -1)controls.setContrast(value);
 }
 void ofxUVCQTKitVideoGrabber::onSaturationChange(float & value){
-	controls.setSaturation(value);
+	if(controlHackWait == -1)controls.setSaturation(value);
 }
 void ofxUVCQTKitVideoGrabber::onSharpnessChange(float & value){
-	controls.setSharpness(value);
+	if(controlHackWait == -1)controls.setSharpness(value);
 }
