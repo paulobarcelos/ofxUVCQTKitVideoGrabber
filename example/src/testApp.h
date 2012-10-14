@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxUCVQTKitVideoGrabber.h"
+#include "ofxUVCQTKitVideoGrabber.h"
 
 class testApp : public ofBaseApp{
 
@@ -10,5 +10,5 @@ class testApp : public ofBaseApp{
 		void update();
 		void draw();
 
-		ofxUCVQTKitVideoGrabber cam;
+		ofxUVCQTKitVideoGrabber cam;
 };

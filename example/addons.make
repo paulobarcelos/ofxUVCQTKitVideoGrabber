@@ -1,5 +1,5 @@
 ofxGui
 ofxQTKitVideoGrabber
-ofxUCVQTKitVideoGrabber
+ofxUVCQTKitVideoGrabber
 ofxUVC
 ofxXmlSettings

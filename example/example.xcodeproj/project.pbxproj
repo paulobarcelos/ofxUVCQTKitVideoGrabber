@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1cd33e884d9e3358252e82a14dc97644 /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 907c5b5e104864a2d3a2574573796b13 /* ofxToggle.cpp */; };
-		38866B0A1629B527006019A8 /* ofxUCVQTKitVideoGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38866B081629B527006019A8 /* ofxUCVQTKitVideoGrabber.cpp */; };
 		38866B0D1629B616006019A8 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38866B0C1629B616006019A8 /* QTKit.framework */; };
 		38866B0F1629B622006019A8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38866B0E1629B622006019A8 /* CoreVideo.framework */; };
+		38866B12162ADD06006019A8 /* ofxUVCQTKitVideoGrabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38866B10162ADD06006019A8 /* ofxUVCQTKitVideoGrabber.cpp */; };
 		39119cbb82bf8341392ff5cae27bbf7f /* UVCCameraControl.m in Sources */ = {isa = PBXBuildFile; fileRef = d78adda555c8f6724e9ad29290a80a75 /* UVCCameraControl.m */; };
 		483908258d00b98b4be69f0765fb3433 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78d67a00eb899fac0943059784f8212a /* ofxLabel.cpp */; };
 		5a4349e9754d6fa14c0f2a3a1abc30b6 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = fc5da1c87211d4f6377da7199d8c5a1e /* tinyxmlparser.cpp */; };
@@ -80,10 +80,10 @@
 		17e65988300fbd9aaa2cd0ca7aad0cfc /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGui.h; path = ../../../addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
 		2834d88a62cd23f3de2c47d1c39bd645 /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxButton.h; path = ../../../addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
 		2b40eda85beb63e46785bc299a638898 /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
-		38866B081629B527006019A8 /* ofxUCVQTKitVideoGrabber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxUCVQTKitVideoGrabber.cpp; path = ../src/ofxUCVQTKitVideoGrabber.cpp; sourceTree = "<group>"; };
-		38866B091629B527006019A8 /* ofxUCVQTKitVideoGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxUCVQTKitVideoGrabber.h; path = ../src/ofxUCVQTKitVideoGrabber.h; sourceTree = "<group>"; };
 		38866B0C1629B616006019A8 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = ../../../../../../../System/Library/Frameworks/QTKit.framework; sourceTree = "<group>"; };
 		38866B0E1629B622006019A8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = ../../../../../../../System/Library/Frameworks/CoreVideo.framework; sourceTree = "<group>"; };
+		38866B10162ADD06006019A8 /* ofxUVCQTKitVideoGrabber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxUVCQTKitVideoGrabber.cpp; path = ../src/ofxUVCQTKitVideoGrabber.cpp; sourceTree = "<group>"; };
+		38866B11162ADD06006019A8 /* ofxUVCQTKitVideoGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxUVCQTKitVideoGrabber.h; path = ../src/ofxUVCQTKitVideoGrabber.h; sourceTree = "<group>"; };
 		4928c6d052b696427d7f98fb56d09652 /* ofxUVC.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUVC.h; path = ../../../addons/ofxUVC/src/ofxUVC.h; sourceTree = SOURCE_ROOT; };
 		50df87d612c5aae17aafa6c02c6bc570 /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
 		52afa1f08c420992caaae6484f64f920 /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSlider.h; path = ../../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
@@ -154,12 +154,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08d32515d874304b91d4a27f17057975 /* ofxUCVQTKitVideoGrabber */ = {
+		08d32515d874304b91d4a27f17057975 /* ofxUVCQTKitVideoGrabber */ = {
 			isa = PBXGroup;
 			children = (
 				f3c1811b048da54717aab99ce58d50b2 /* src */,
 			);
-			name = ofxUCVQTKitVideoGrabber;
+			name = ofxUVCQTKitVideoGrabber;
 			sourceTree = "<group>";
 		};
 		1f4fb5c423662b96adfdcc0badec1cb0 /* ofxXmlSettings */ = {
@@ -232,7 +232,7 @@
 			children = (
 				480a780d8d0308ae4a3688014739cb6d /* ofxGui */,
 				9bf1bb533ac1a42278b5ac3d50250bc6 /* ofxQTKitVideoGrabber */,
-				08d32515d874304b91d4a27f17057975 /* ofxUCVQTKitVideoGrabber */,
+				08d32515d874304b91d4a27f17057975 /* ofxUVCQTKitVideoGrabber */,
 				f5b54e39cf589ca1e5c94c02a9894e86 /* ofxUVC */,
 				1f4fb5c423662b96adfdcc0badec1cb0 /* ofxXmlSettings */,
 			);
@@ -342,8 +342,8 @@
 		f3c1811b048da54717aab99ce58d50b2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				38866B081629B527006019A8 /* ofxUCVQTKitVideoGrabber.cpp */,
-				38866B091629B527006019A8 /* ofxUCVQTKitVideoGrabber.h */,
+				38866B10162ADD06006019A8 /* ofxUVCQTKitVideoGrabber.cpp */,
+				38866B11162ADD06006019A8 /* ofxUVCQTKitVideoGrabber.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -455,7 +455,7 @@
 				933a2227713c720ceff80fd967d0a8ee /* tinyxml.cpp in Sources */,
 				9d44dc88ef9e7991b4a09951e2e4769f /* tinyxmlerror.cpp in Sources */,
 				5a4349e9754d6fa14c0f2a3a1abc30b6 /* tinyxmlparser.cpp in Sources */,
-				38866B0A1629B527006019A8 /* ofxUCVQTKitVideoGrabber.cpp in Sources */,
+				38866B12162ADD06006019A8 /* ofxUVCQTKitVideoGrabber.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

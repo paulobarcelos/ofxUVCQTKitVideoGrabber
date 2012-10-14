@@ -5,10 +5,21 @@
 #include "ofxUVC.h"
 #include "ofxGui.h"
 
-class ofxUCVQTKitVideoGrabber : public ofxQTKitVideoGrabber {
+class ofxUVCQTKitVideoGrabber : public ofxQTKitVideoGrabber {
 public:
-	ofxUCVQTKitVideoGrabber();
+	enum CameraModel {
+		MICROSOFT_LIFECAM_HD_5000 = 0,
+		MICROSOFT_LIFECAM_HD_3000,
+		ENCORE_ELECTRONICS_ENUCM_013,
+		ROSEWILL,
+		BUILT_IN_ISIGHT,
+		LOGITECH_C910,
+		LOGITECH_C6260
+	};
+	
+	ofxUVCQTKitVideoGrabber();
 	void update();
+	void setupControls(CameraModel model);
 	void setupControls(int vendorId, int productId, int interfaceNum);
 	void setupGui(string collectionName="", string _filename="settings.xml", float x = 10, float y = 10);
 	
@@ -16,7 +27,6 @@ public:
 	
 	ofxPanel& getGui();
 	ofxUVC& getControl();
-
 private:
 	
 	void onAutoExposureChange(bool & enable);
@@ -38,4 +48,6 @@ private:
 	ofxPanel gui;
 	
 	int controlHackWait;
+	
+	static const int CAMERAS_DATABASE[]; // intialized in cpp	
 };
