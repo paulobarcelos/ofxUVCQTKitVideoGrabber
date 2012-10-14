@@ -27,7 +27,7 @@ void ofxUVCQTKitVideoGrabber::setupControls(CameraModel model){
 				  CAMERAS_DATABASE[index + 2]);
 }
 void ofxUVCQTKitVideoGrabber::setupControls(int vendorId, int productId, int interfaceNum){
-	control.useCamera(vendorId, productId, interfaceNum);
+	controls.useCamera(vendorId, productId, interfaceNum);
 }
 void ofxUVCQTKitVideoGrabber::setupGui(string collectionName, string _filename, float x, float y){
 	controlHackWait = 1;
@@ -120,43 +120,43 @@ void ofxUVCQTKitVideoGrabber::drawGui(){
 ofxPanel& ofxUVCQTKitVideoGrabber::getGui(){
 	return gui;
 }
-ofxUVC& ofxUVCQTKitVideoGrabber::getControl(){
-	return control;
+ofxUVC& ofxUVCQTKitVideoGrabber::getControls(){
+	return controls;
 }
 
 void ofxUVCQTKitVideoGrabber::onAutoExposureChange(bool & enable){
-	control.setAutoExposure(enable);
+	controls.setAutoExposure(enable);
 }
 void ofxUVCQTKitVideoGrabber::onExposureChange(float & value){
-	control.setExposure(1-value);
+	controls.setExposure(1-value);
 }
 
 void ofxUVCQTKitVideoGrabber::onAutoFocusChange(bool & enable){
-	control.setAutoFocus(enable);
+	controls.setAutoFocus(enable);
 }
 void ofxUVCQTKitVideoGrabber::onAbsoluteFocusChange(float & value){
-	control.setAbsoluteFocus(value);
+	controls.setAbsoluteFocus(value);
 }
 
 void ofxUVCQTKitVideoGrabber::onAutoWhiteBalanceChange(bool & enable){
-	control.setAutoWhiteBalance(enable);
+	controls.setAutoWhiteBalance(enable);
 }
 void ofxUVCQTKitVideoGrabber::onWhiteBalanceChange(float & value){
-	control.setWhiteBalance(value);
+	controls.setWhiteBalance(value);
 }
 
 void ofxUVCQTKitVideoGrabber::onGainChange(float & value){
-	control.setGain(value);
+	controls.setGain(value);
 }
 void ofxUVCQTKitVideoGrabber::onBrightnessChange(float & value){
-	control.setBrightness(value);
+	controls.setBrightness(value);
 }
 void ofxUVCQTKitVideoGrabber::onContrastChange(float & value){
-	control.setContrast(value);
+	controls.setContrast(value);
 }
 void ofxUVCQTKitVideoGrabber::onSaturationChange(float & value){
-	control.setSaturation(value);
+	controls.setSaturation(value);
 }
 void ofxUVCQTKitVideoGrabber::onSharpnessChange(float & value){
-	control.setSharpness(value);
+	controls.setSharpness(value);
 }

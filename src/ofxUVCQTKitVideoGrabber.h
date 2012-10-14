@@ -26,7 +26,7 @@ public:
 	void drawGui();
 	
 	ofxPanel& getGui();
-	ofxUVC& getControl();
+	ofxUVC& getControls();
 private:
 	
 	void onAutoExposureChange(bool & enable);
@@ -44,7 +44,7 @@ private:
     void onSaturationChange(float & value);
     void onSharpnessChange(float & value);	
 	
-	ofxUVC control;
+	ofxUVC controls;
 	ofxPanel gui;
 	
 	int controlHackWait;
