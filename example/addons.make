@@ -1,0 +1,5 @@
+ofxGui
+ofxQTKitVideoGrabber
+ofxUCVQTKitVideoGrabber
+ofxUVC
+ofxXmlSettings
